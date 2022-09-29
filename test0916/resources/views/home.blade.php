@@ -1,3 +1,14 @@
+welcome to home blade php
+<html>
+    <head>
+
+    </head>
+    <body>
+        @foreach($products as $product)
+        {{ $product}}
+        @endforeach
+    </body>
+</html>
 @extends('layouts.app')
 
 @section('content')

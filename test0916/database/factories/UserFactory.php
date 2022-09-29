@@ -14,6 +14,7 @@ class UserFactory extends Factory
      * Define the model's default state.
      *
      * @return array<string, mixed>
+     * 產生假資料用
      */
     public function definition()
     {
