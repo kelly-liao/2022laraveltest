@@ -1,4 +1,5 @@
 welcome to home blade php
+<!DOCTYPE html>
 <html>
     <head>
 

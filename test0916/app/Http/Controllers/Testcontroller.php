@@ -26,8 +26,10 @@ class Testcontroller extends Controller
     }
 
     public function product(){
-        $products =['name'=>'iphone','price'=>'799'];
-        return view("home",['products'=>$products]);
+
+        $products =['name'=>'iphone','price'=>799];
+        // return view("home",['products'=>$products]); 31或32行都可以
+        return view("home",compact('products'));
     }
 
     // /**

@@ -14,9 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/about-us','App\Http\Controllers\TestController@index')->name('about');
+
+Route::group(['prefix'=>'account'],function(){
+    Route::get('register','App\Http\Controllers\TestController@register');
+    Route::get('login','App\Http\Controllers\TestController@login');
+});
+
+Route::get('/product','App\Http\Controllers\TestController@product');
