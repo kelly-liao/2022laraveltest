@@ -39,9 +39,19 @@ class Testcontroller extends Controller
 
     public function store(Request $request ){
         //submit thr form
+        // dd($request->get('title'));
         // dd($request->all());//show everything it request
         // dd($request->title);//show title only
-        dd($request->get('title'));
+ 
+        $this->validate($request,[
+            'title'=>'required|min:3|max:20',
+            'discripiton'=>'required'
+        ],[
+            'title.required'=>'please enter the name of product'
+        ]);
+
+        dd(request('title'));
+        
     }
     // /**
     //  * Show the form for creating a new resource.
