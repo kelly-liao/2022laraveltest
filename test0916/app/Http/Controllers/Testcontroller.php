@@ -26,12 +26,23 @@ class Testcontroller extends Controller
     }
 
     public function product(){
-        $products =[];
-        // $products =['name'=>'iphone','price'=>799];
+        // $products =[];
+        $products =['name'=>'iphone','price'=>799];
         // return view("home",['products'=>$products]); line 31 or 32 choose one
         return view("home",compact('products'));
     }
 
+    public function create(){
+        //show the form
+        return view('product.create');
+    }
+
+    public function store(Request $request ){
+        //submit thr form
+        // dd($request->all());//show everything it request
+        // dd($request->title);//show title only
+        dd($request->get('title'));
+    }
     // /**
     //  * Show the form for creating a new resource.
     //  *
