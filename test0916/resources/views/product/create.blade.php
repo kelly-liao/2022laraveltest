@@ -7,6 +7,10 @@
         <title>Document</title>
     </head>
     <body>
+        @if(Session::has('message'))
+            <p>{{Session::get('message')}} </p>
+        @endif
+
         @if($errors->any())
             @foreach($errors->all() as $error)
                 <p>{{$error}}</p>

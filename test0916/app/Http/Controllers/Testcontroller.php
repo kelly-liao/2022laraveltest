@@ -50,8 +50,16 @@ class Testcontroller extends Controller
             'title.required'=>'please enter the name of product'
         ]);
 
-        dd(request('title'));
-        
+        //save to database
+        // return redirect()->back();   //line 54 and 55 choose one
+        // return back();
+        // return redirect()->route('product.index'); 
+
+        $id = 1;
+        // return redirect('/product/'.$id); 
+        return back()->with('message','Your product was created successfully!');
+
+
     }
     // /**
     //  * Show the form for creating a new resource.
