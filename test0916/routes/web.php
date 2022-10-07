@@ -30,3 +30,16 @@ Route::get('/product','App\Http\Controllers\TestController@product')->name('prod
 
 Route::get('/test/create','App\Http\Controllers\TestController@create');
 Route::post('/test/store','App\Http\Controllers\TestController@store')->name('test.store');
+
+
+//posts
+
+Route::get('/posts/store','App\Http\Controllers\PostController@store');
+Route::get('/posts','App\Http\Controllers\PostController@index');
+Route::get('/post/{id}','App\Http\Controllers\PostController@show');
+
+Route::get('/post/update/{id}','App\Http\Controllers\PostController@update');
+
+Route::get('/post/delete/{id}','App\Http\Controllers\PostController@destory');
+
+Route::get('/show','App\Http\Controllers\PostController@getPost');
